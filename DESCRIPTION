@@ -1,0 +1,23 @@
+Package: Ramp
+Type: Package
+Title:  a Ridge-regression-based model for DNA methylation prediction per CpG using gene expression
+Version: 0.99.1
+Date: 2024-10-30
+Description: Ramp is a Ridge-regression-based model for DNA methylation prediction per CpG using gene expression.
+biocViews: StatisticalMethod, WorkflowStep, DNAMethylation, GeneExpression, 
+RNASeq, WholeGenome, SingleCell, Spatial, TimeCourse
+Encoding: UTF-8
+License: GPL-2
+RoxygenNote: 7.3.2
+VignetteBuilder: knitr
+Imports: data.table, devtools, fastcluster, grid, ggplot2, gridExtra, grDevices, 
+matrixcalc, Matrix, RColorBrewer, TSCAN, org.Hs.eg.db,
+pheatmap, plyr, parallel, reshape2, stats, 
+viridis, splines
+Suggests: knitr, rmarkdown, markdown
+Depends: R (>= 4.0.2)
+NeedsCompilation: no
+Packaged: 2024-10-30 11:36:03 UTC; wenpinhou
+Authors@R: person("Wenpin", "Hou", email = "wp.hou3@gmail.com", role = c("cre","aut"), comment = c(ORCID = "0000-0003-0972-2192"))
+Author: Wenpin Hou [cre, aut] (<https://orcid.org/0000-0003-0972-2192>)
+Maintainer: Wenpin Hou <wp.hou3@gmail.com>
