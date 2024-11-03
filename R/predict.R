@@ -1,5 +1,14 @@
 #' Perform the model pretraining.
-#' 
+#'
+#' @author Wenpin Hou <wp.hou3@gmail.com>
+#' @return a predicted DNA methylation matrix of beta values for CpG (rows) by sample (columns)
+#' @export
+#' @import data.table fastcluster reshape2
+#' @importFrom matrixcalc %s%
+#' @param expr gene by sample expresion matrix for model prediction.
+#' @param model the model that has been pre-trained.
+#' @param impute logical. Default=F. Impute the gene expression or not.
+
 predict <- function(expr,model,impute=F) {
   # impute: impute the genes that are in training set but not in prediction set.
 	
