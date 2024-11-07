@@ -1,13 +1,21 @@
 #' Perform the model pretraining.
 #' 
+#' This function is used to perform the model pretraining.
+#'
+#' @author Wenpin Hou <wp.hou3@gmail.com>
+#' @return a list of pretrained model paramters
+#' @export
+#' @import data.table fastcluster SMUT
+#' @importFrom matrixcalc %s%
+#' @param expr gene by sample expresion matrix for model training
+#' @param meth CpG by sample DNA methylation matrix for model training
+#' @param log.transform  logical. default = TRUE. Whether to perform logit-transformation to the DNA methylation data
+#' @param filter.low.express.gene logical. default = TRUE. Whether to filter out lowly expressed genes. 
+#' @param filter.low_var.gene logical. default = TRUE. Whether to filter out lowly variable genes. 
 
 
-library(SMUT)
 trainmodel <- function(expr,meth, log.transform = TRUE, filter.low.express.gene = TRUE, filter.low_var.gene = TRUE) {
   set.seed(12345)
-  library(data.table)
-  library(fastcluster)
-  
   # avoid 0 and 1 to enter logit function
   if (log.transform){
     meth[meth==0] <- min(meth[meth>0])
