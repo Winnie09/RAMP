@@ -18,9 +18,6 @@ To install the latest version of ramp package via Github, run the following comm
 devtools::install_github("Winnie09/ramp")
 ```
 
-If there is any problem with the installation process, please make sure you have R version at least 3.5.x and you have installed Rtools (Windows users) or clang (mac users). If the problem still occurs, please contact the author (see below).
-
-
 ## Contact
 
 Should you encounter any bugs or have any suggestions, please feel free to contact Wenpin Hou <wh2526@cumc.columbia.edu>, or open an issue on the Github page https://github.com/Winnie09/Lamian/issues.
