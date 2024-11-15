@@ -1,3 +1,15 @@
+#' 
+#' Predict DNA methylation using nearest gene's expression.
+#'
+#' @author Wenpin Hou <wp.hou3@gmail.com>
+#' @return predicted DNA methylation signals. 
+#' @export
+#' @import data.table fastcluster reshape2
+#' @param trainexpr gene by sample expresion matrix for model training
+#' @param trainmeth CpG by sample DNA methylation matrix for model training
+#' @param testexpr gene by sample expresion matrix for model prediction
+#' @param species  character. "human" (default) or "mouse".
+
 nearestgenepredict <- function(trainexpr,testexpr,trainmeth,species='human') {
   library(data.table)
   library(fastcluster)
