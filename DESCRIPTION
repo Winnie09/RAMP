@@ -1,19 +1,15 @@
 Package: Ramp
 Type: Package
-Title:  a Ridge-regression-based model for DNA methylation prediction per CpG using gene expression
+Title:  A Ridge-regression-based model for DNA methylation prediction per CpG using gene expression
 Version: 0.99.1
 Date: 2024-10-30
 Description: Ramp is a Ridge-regression-based model for DNA methylation prediction per CpG using gene expression.
-biocViews: StatisticalMethod, WorkflowStep, DNAMethylation, GeneExpression, 
-RNASeq, WholeGenome, SingleCell, Spatial, TimeCourse
+biocViews: StatisticalMethod, WorkflowStep, DNAMethylation, GeneExpression, RNASeq, WholeGenome, SingleCell, Spatial, TimeCourse
 Encoding: UTF-8
 License: GPL-2
 RoxygenNote: 7.3.2
 VignetteBuilder: knitr
-Imports: data.table, devtools, fastcluster, grid, ggplot2, gridExtra, grDevices, 
-matrixcalc, Matrix, RColorBrewer, TSCAN, org.Hs.eg.db,
-pheatmap, plyr, parallel, reshape2, stats, 
-viridis, splines
+Imports: data.table, devtools, fastcluster, grid, ggplot2, gridExtra, grDevices, matrixcalc, Matrix, org.Hs.eg.db, pheatmap, plyr, parallel, reshape2, stats,  splines
 Suggests: knitr, rmarkdown, markdown
 Depends: R (>= 4.0.2)
 NeedsCompilation: no
