@@ -2,8 +2,6 @@
 
 ====
 
-<img src="https://github.com/Winnie09/Lamian/blob/master/vignettes/logo.png"  width = "150">
-
 ## ramp Installation
 
 ramp software can be installed via Github.
