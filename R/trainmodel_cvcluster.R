@@ -1,10 +1,13 @@
 #' Perform the model pretraining.
-#' 
+#'
+#' @author Wenpin Hou <wp.hou3@gmail.com>
+#' @return a list of pretrained model paramters
+#' @export
+#' @import data.table fastcluster
+#' @param expr gene by sample expresion matrix for model training
+#' @param meth CpG by sample DNA methylation matrix for model training
 
-trainmodel <- function(expr,meth) {
-  library(data.table)
-  library(fastcluster)
-  
+trainmodel_cvcluster <- function(expr,meth) {
   meth[meth==0] <- min(meth[meth>0])
   meth[meth==1] <- max(meth[meth<1])
   meth <- log(meth/(1-meth))
