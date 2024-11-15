@@ -1,21 +1,18 @@
-#' 
-#'
-#' This function is used to identify DMR.
+#' Identify differentially methylated regions (DMR).
 #'
 #' @author Wenpin Hou <wp.hou3@gmail.com>
 #' @return test statistics and significance level
 #' @export
 #' @import parallel
 #' @importFrom matrixcalc %s%
-#' @param expr
-#' @param sample
-#' @param samplename
-#' @param group
-#' @param ind
-#' @param method
-#' @examples
+#' @param expr gene by cell normalized expression matrix. 
+#' @param sample a vector of sample names. Its length is the same as the number of columns in cell by gene normalized expression matrix.
+#' @param samplename a vector the unique sample names
+#' @param group a vector of the group indicator, 1 or 0, for differential analysis.
+#' @param ind whether to construct design matrix. 
+#' @param method default is "all".  Other values are "limmacell_saver", "BSmooth_saver", "glmm_saver", "wilcoxon_saver", "t_saver", "scDD_saver", "MAST_saver", "limma_saver".
 
-## identify DMR
+
 findDMR <-  function(expr=expr,sample=sample,samplename=samplename,group=group,ind=ind, method = 'all') {
   func <- list()
   
